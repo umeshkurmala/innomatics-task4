@@ -1,0 +1,158 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: rgb(239, 234, 236);
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://www.hubspot.com/hs-fs/hubfs/lp-hero.png') no-repeat center center/cover;
+    color: rgb(23, 22, 70);
+    text-align: center;
+    padding: 10rem 2rem;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Adjust size as needed */
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.features h2 {
+    text-align: center;
+    width: 100%; /* Center heading */
+}
+
+.feature {
+    flex: 1 1 30%; /* Adjust to 30% for three columns */
+    margin: 1rem;
+    padding: 2rem;
+    background: #e7e7e7;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Signup Section */
+.signup {
+    padding: 2rem;
+    background: #f1f1f1;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+
+.signup button {
+    padding: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Stacks features vertically on mobile */
+    }
+
+    .feature {
+        flex: 1 1 100%; /* Full width for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .features {
+        flex-direction: row; /* Two columns on tablet */
+    }
+
+    .feature {
+        flex: 1 1 45%; /* Adjust to 45% for two columns */
+    }
+}
+
+@media (min-width: 1025px) {
+    .features {
+        flex-direction: row; /* Three columns on desktop */
+    }
+
+    .feature {
+        flex: 1 1 30%; /* Adjust to 30% for three columns */
+    }
+}
